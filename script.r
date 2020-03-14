@@ -60,7 +60,7 @@ A02Q <- A02N %>% group_by(State, Region) %>% summarise(media=mean(Quantity), qtd
 cor(A02Q[, 3:4]);
 pairs(A02Q[, 3:4]);
 
-boxplot(media ~ Region, data= A02Q, xlab = 'Regi�o', ylab = 'M�dia');
+boxplot(media ~ Region, data= A02Q, xlab = 'Regiao', ylab = 'Media');
 reg = lm(media ~ Region, data = A02Q);
 summary(reg);
 anova(reg);
