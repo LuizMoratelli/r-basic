@@ -10,6 +10,9 @@
 
 ## Exercício 4
 
+### Pairs `A02Q`
+![image](https://github.com/LuizMoratelli/r-basic/blob/master/pairs-media-qtd.png)
+
 ### Boxplot `media ~ Region`
 ![image](https://github.com/LuizMoratelli/r-basic/blob/master/bloxpot-media-region.png)
 
