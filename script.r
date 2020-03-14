@@ -24,17 +24,15 @@ A02 <- read_excel('./A02.xlsx');
 
 # Exercicio 3
 boxplot(A02$Quantity);
-boxplot(A02$`Order Date`);
 
 media_quantidade <- mean(A02$Quantity);
 dp_quantidade <- sd(A02$Quantity);
 
 ## Dividido pelo numero de Regios(13)
-erro_quantidade <- qnorm(0.975) * dp_quantidade/13;
 
+erro_quantidade <- qnorm(0.975) * dp_quantidade/13;
 li_quantidade <- media_quantidade - erro_quantidade;
 ls_quantidade <- media_quantidade + erro_quantidade;
-
 out_max_quantidade <- media_quantidade + 3 * dp_quantidade;
 out_min_quantidade <- media_quantidade - 3 * dp_quantidade;
 
@@ -45,11 +43,8 @@ A02N <- A02 %>% filter(Quantity < out_max_quantidade & Quantity > out_min_quanti
 boxplot(A02N$Quantity);
 
 media_quantidade <- mean(A02N$Quantity);
-
 dp_quantidade <- sd(A02N$Quantity);
-
 erro_quantidade <- qnorm(0.975) * dp_quantidade/13;
-
 li_quantidade <- media_quantidade - erro_quantidade;
 ls_quantidade <- media_quantidade + erro_quantidade;
 
